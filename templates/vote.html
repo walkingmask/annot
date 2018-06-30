@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Anotte</title>
+<style type="text/css">
+#container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3vh;
+}
+#highlight {
+  font-weight: bold;
+}
+#img {
+  width: 50vh;
+}
+#container form {
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
+}
+.button {
+  width: 45%;
+  height: 5vh;
+  font-size: 3vh;
+  background-color: lightgray;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<p>この人は<span id="highlight">{{ type }}</span>っぽいですか？</p>
+<img id="img" src="{{ filepath }}">
+<form method="POST">
+    <input type="hidden" name="id" value="{{ id }}">
+    <input type="hidden" name="label" value="{{ label }}">
+    <input class="button" type="submit" name="value" value="はい">
+    <input class="button" type="submit" name="value" value="いいえ">
+</form>
+</div>
+</body>
